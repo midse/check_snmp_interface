@@ -1,5 +1,6 @@
 # check_snmp_interface
 
+```
 Usage:
     check_snmp_interface.py (-h|--help)
     check_snmp_interface.py [ -f <filename> | --file <filename> ] [ -s <redis_socket_path> | --sock <redis_socket_path> ]
@@ -24,3 +25,4 @@ Options:
     -x --priv-prot  set privacy protocol (DES|AES)
     -X --priv-pass  set privacy protocol pass phrase
     -u --username   set security name
+```
