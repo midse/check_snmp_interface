@@ -45,8 +45,7 @@ pip install -r requirements.txt
 
 ### Configure Redis
 
-
 ```bash
-Port 0 # Will not listen on a TCP socket
+port 0 # Will not listen on a TCP socket
 unixsocket /tmp/redis.sock
 ```
