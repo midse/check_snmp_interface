@@ -1,5 +1,7 @@
 # check_snmp_interface
 
+## Usage
+
 ```
 Usage:
     check_snmp_interface.py (-h|--help)
@@ -28,3 +30,10 @@ Options:
     -X --priv-pass  set privacy protocol pass phrase
     -u --username   set security name
 ```
+
+## Installation
+
+```bash
+pip install -r requirements.txt 
+```
+
