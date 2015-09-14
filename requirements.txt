@@ -1,0 +1,8 @@
+cffi>=1.2.1
+docopt>=0.6.2
+pyasn1>=0.1.8
+pycparser>=2.14
+pycrypto>=2.6.1
+pysnmp>=4.2.5
+redis>=2.10.3
+snimpy>=0.8.6
