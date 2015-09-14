@@ -1,12 +1,14 @@
 # check_snmp_interface
 
+You can either define a config file (a set of credentials by GROUP_NAME) or specify all the parameters. 
+
 ## Usage
 
 ```
 Usage:
     check_snmp_interface.py (-h|--help)
     check_snmp_interface.py [ -f <filename> | --file <filename> ] [ -s <redis_socket_path> | --sock <redis_socket_path> ]
-                            [-m <mib_path> | --mib <mib_path> ] [ --fields=<list> ] [ -i <if_name> | --ifname <if_name> ]  HOST INTERFACE_ID DEVICE_TYPE
+                            [-m <mib_path> | --mib <mib_path> ] [ --fields=<list> ] [ -i <if_name> | --ifname <if_name> ]  HOST INTERFACE_ID GROUP_NAME
     check_snmp_interface.py [ -s <redis_socket_path> | --sock <redis_socket_path> ] [-m <mib_path> | --mib <mib_path> ]  [ --fields=<list> ]
                             [ -i <if_name> | --ifname <if_name> ] (-a <auth_prot> | --auth-prot <auth_prot>) (-A <auth_pass> | --auth-pass <auth_pass>)
                             (-x <priv_prot> | --priv-pass <priv_prot>) (-X <priv_pass> | --priv-pass <priv_pass>)
@@ -15,7 +17,7 @@ Usage:
 Arguments:
     HOST           ip address of the device
     INTERFACE_ID   last number of the interface OID
-    DEVICE_TYPE    should be defined in your config file as a new section
+    GROUP_NAME    should be defined in your config file as a new section
     
 Options:
     -h --help       show this help message and exit
@@ -43,7 +45,7 @@ Script not tested with Python 2.X. We recommend using Python 3.X.
 pip install -r requirements.txt 
 ```
 
-### Configure Redis
+### Redis
 
 ```bash
 port 0 # Will not listen on a TCP socket

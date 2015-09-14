@@ -1,18 +1,18 @@
 [DEFAULT]
-path_to_if_mib =
+path_to_if_mib = /your/path/to/ifmib
 
-[SNMP_CISCO]
-secname =
-authprotocol =
-authpassword =
-privprotocol =
-privpassword =
+[SNMP_SOMEDEVICES]
+secname = username
+authprotocol = SHA
+authpassword = yourpassword
+privprotocol = AES
+privpassword = yourpassword
 mib_fields = ifHCInOctets,ifHCInMulticastPkts,ifHCInBroadcastPkts,ifHCInUcastPkts,ifInErrors,ifInDiscards,ifHCOutOctets,ifHCOutMulticastPkts,ifHCOutBroadcastPkts,ifHCOutUcastPkts,ifOutErrors,ifOutDiscards
 
-[SNMP_FORTINET]
-secname =
-authprotocol =
-authpassword =
-privprotocol =
-privpassword =
+[SNMP_OTHERDEVICES]
+secname = username2
+authprotocol = MD5
+authpassword = yourpassword2
+privprotocol = DES
+privpassword = yourpassword2
 mib_fields = ifHCInOctets,ifInErrors,ifInDiscards,ifHCOutOctets,ifOutErrors,ifOutDiscards

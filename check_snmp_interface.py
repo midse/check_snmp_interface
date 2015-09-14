@@ -1,5 +1,5 @@
 #!/usr/bin/python3.4
-# -*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 
 """
 check_snmp_interface.py - Icinga plugin (SNMP v3 only)
@@ -7,7 +7,7 @@ check_snmp_interface.py - Icinga plugin (SNMP v3 only)
 Usage:
     check_snmp_interface.py (-h|--help)
     check_snmp_interface.py [ -f <filename> | --file <filename> ] [ -s <redis_socket_path> | --sock <redis_socket_path> ]
-                            [-m <mib_path> | --mib <mib_path> ] [ --fields=<list> ] [ -i <if_name> | --ifname <if_name> ]  HOST INTERFACE_ID DEVICE_TYPE
+                            [-m <mib_path> | --mib <mib_path> ] [ --fields=<list> ] [ -i <if_name> | --ifname <if_name> ]  HOST INTERFACE_ID GROUP_NAME
     check_snmp_interface.py [ -s <redis_socket_path> | --sock <redis_socket_path> ] [-m <mib_path> | --mib <mib_path> ]  [ --fields=<list> ]
                             [ -i <if_name> | --ifname <if_name> ] (-a <auth_prot> | --auth-prot <auth_prot>) (-A <auth_pass> | --auth-pass <auth_pass>)
                             (-x <priv_prot> | --priv-pass <priv_prot>) (-X <priv_pass> | --priv-pass <priv_pass>)
@@ -16,7 +16,7 @@ Usage:
 Arguments:
     HOST           ip address of the device
     INTERFACE_ID   last number of the interface OID
-    DEVICE_TYPE    should be defined in your config file as a new section
+    GROUP_NAME    should be defined in your config file as a new section
 
 Options:
     -h --help       show this help message and exit
@@ -126,7 +126,7 @@ def main():
     if arguments["--mib"]:
         path_to_if_mib = arguments['<mib_path>']
 
-    if not arguments['DEVICE_TYPE']:
+    if not arguments['GROUP_NAME']:
         using_config_file = False
         secname = arguments['<secname>']
         authprotocol = arguments['<auth_prot>'].upper()
@@ -138,7 +138,7 @@ def main():
             print("Error: check your authentication/private protocol")
             exit(1)
     else:
-        device_type = arguments['DEVICE_TYPE'].upper()
+        device_type = arguments['GROUP_NAME'].upper()
 
     if using_config_file:
         # Check if config file readable and exist
