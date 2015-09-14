@@ -9,10 +9,12 @@ Usage:
                             [ -i <if_name> | --ifname <if_name> ] (-a <auth_prot> | --auth-prot <auth_prot>) (-A <auth_pass> | --auth-pass <auth_pass>)
                             (-x <priv_prot> | --priv-pass <priv_prot>) (-X <priv_pass> | --priv-pass <priv_pass>)
                             (-u <secname> | --username <secname>) HOST INTERFACE_ID
+                            
 Arguments:
     HOST           ip address of the device
     INTERFACE_ID   last number of the interface OID
     DEVICE_TYPE    should be defined in your config file as a new section
+    
 Options:
     -h --help       show this help message and exit
     -s --sock       set redis unix socket path (default: /tmp/redis.sock)
