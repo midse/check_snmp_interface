@@ -33,7 +33,20 @@ Options:
 
 ## Installation
 
+Just download the zip file from Github.
+
+### Requirements
+
+Script not tested with Python 2.X. We recommend using Python 3.X.
+
 ```bash
 pip install -r requirements.txt 
 ```
 
+### Configure Redis
+
+
+```bash
+Port 0 # Will not listen on a TCP socket
+unixsocket /tmp/redis.sock
+```
