@@ -2,6 +2,8 @@
 
 You can either define a config file (a set of credentials by GROUP_NAME) or specify all the parameters. 
 
+Code need some cleanup and a lot of improvements can be done. Feel free to contribute! :)
+
 ## Usage
 
 ```
