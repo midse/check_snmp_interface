@@ -16,7 +16,7 @@ Usage:
 Arguments:
     HOST           ip address of the device
     INTERFACE_ID   last number of the interface OID
-    GROUP_NAME    should be defined in your config file as a new section
+    GROUP_NAME     should be defined in your config file as a new section
 
 Options:
     -h --help       show this help message and exit

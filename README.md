@@ -2,7 +2,7 @@
 
 You can either define a config file (a set of credentials by GROUP_NAME) or specify all the parameters. 
 
-Code need some cleanup and a lot of improvements can be done. Feel free to contribute! :)
+Code obviously needs some cleanup and a lot of improvements can be done. Feel free to contribute! :)
 
 ## Usage
 
@@ -19,7 +19,7 @@ Usage:
 Arguments:
     HOST           ip address of the device
     INTERFACE_ID   last number of the interface OID
-    GROUP_NAME    should be defined in your config file as a new section
+    GROUP_NAME     should be defined in your config file as a new section
     
 Options:
     -h --help       show this help message and exit
@@ -41,7 +41,7 @@ Just download the zip file from Github.
 
 ### Requirements
 
-Script not tested with Python 2.X. We recommend using Python 3.X.
+Script was not tested with Python 2.X. We recommend using Python 3.X.
 
 ```bash
 pip install -r requirements.txt 
