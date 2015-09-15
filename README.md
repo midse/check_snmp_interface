@@ -1,7 +1,7 @@
 # check_snmp_interface
 
 
-This plugin is used to keep track of counters (e.g. ifHCInOctets) and will store the last value for each counter inside Redis. 
+This plugin (SNMPv3 only) is used to keep track of counters (e.g. ifHCInOctets) and will store the last value for each counter inside Redis. 
 The plugin output is based on perfdata format and will give you the rate per second for each counter.
 
 You can either define a config file (a set of credentials by GROUP_NAME) or specify all the parameters. 
@@ -43,7 +43,7 @@ Options:
 
 ## Installation
 
-Just download the zip file from Github.
+Just download the zip file from Github, extract the python file and put it where Icinga can execute it (make sure to set the right permissions)
 
 ### Requirements
 
